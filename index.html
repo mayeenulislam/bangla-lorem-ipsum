@@ -117,120 +117,22 @@
         const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]');
         const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl));
     </script>
-    <script>
-        var femaleFirstNames = [
-            "ইনায়া",
-            "ইলোরা",
-            "নাজিয়া",
-            "নিম্মী",
-            "রেজওয়ানা",
-            "রেদওয়ানা",
-            "সামিয়া",
-            "সুমনা",
-            "সুমাইয়া",
-            "হাফসা",
-            "হানুফা",
-            "হুমায়রা",
-        ];
+    <script src="assets/js/core-functions.js"></script>
 
-        var femaleLastNames = [
-            "ইসলাম",
-            "খাতুন",
-            "নেসা",
-            "বেগম",
-            "মুখার্জি",
-            "রোজারিও",
-            "হাওলাদার",
-            "হায়দার",
-        ];
-        
-        var maleFirstNames = [
-            "অমিয়",
-            "অনুপ",
-            "অজয়",
-            "অভিষেক",
-            "আমজাদ",
-            "আরহাম",
-            "আহসান",
-            "বদরুল",
-            "মঈনুল",
-            "সুমন্ত",
-            "হুমায়ূন",
-            "জাফর",
-            "রবীন্দ্রনাথ",
-        ];
-        
-        var maleLastNames = [
-            "আসলাম",
-            "ইসলাম",
-            "কোড়াইয়া",
-            "ঠাকুর",
-            "মুখার্জি",
-            "রোজারিও",
-            "হক",
-            "হাওলাদার",
-            "হায়দার",
-            "হোসেন",
-        ];
+    <!-- In alphabetical order: Female -->
+    <script src="assets/js/christian-female-names.js"></script>
+    <script src="assets/js/hindu-female-names.js"></script>
+    <script src="assets/js/muslim-female-names.js"></script>
 
-        var outputElement = document.getElementById("random-names");
+    <!-- In alphabetical order: Male -->
+    <script src="assets/js/christian-male-names.js"></script>
+    <script src="assets/js/hindu-male-names.js"></script>
+    <script src="assets/js/muslim-male-names.js"></script>
 
-        function generateRandomNames(firstNames, lastNames) {
-            var randomNames = [];
-            var totalIterations = firstNames.length + lastNames.length;
-
-            for (i = 0; i <= totalIterations; i++) {
-                var randomFirstName = '';
-                var randomLastName = '';
-
-                randomFirstName = firstNames[Math.floor(Math.random() * firstNames.length)];
-                randomLastName = lastNames[Math.floor(Math.random() * lastNames.length)];
-
-                // Generate a name.
-                randomNames.push(randomFirstName + ' ' + randomLastName);
-                // Remove all the duplicates.
-                randomNames.reduce(function (a, b) { if (a.indexOf(b) < 0) a.push(b); return a; }, []);
-            }
-
-            var output = '';
-            randomNames.forEach(function (name) {
-                output += `<div class="col">
-                    <div class="card p-1 text-center">
-                        ${name}
-                    </div>
-                </div>`;
-            });
-
-            outputElement.innerHTML = output;
-            // outputElement.innerHTML = randomNames.join('<br/>');
-        }
-
-        var firstNames = femaleFirstNames.concat(maleFirstNames);
-        var lastNames = femaleLastNames.concat(maleLastNames);
-
-        generateRandomNames(firstNames, lastNames);
-
-        var nameChoices = document.querySelectorAll('input[name="name_choice"]');
-        nameChoices.forEach((nameChoice) => {
-            nameChoice.addEventListener('change', function (e) {
-                if ('male' === e.target.value) {
-                    firstNames = maleFirstNames;
-                    lastNames = maleLastNames;
-                } else if ('female' === e.target.value) {
-                    firstNames = femaleFirstNames;
-                    lastNames = femaleLastNames;
-                } else {
-                    firstNames = femaleFirstNames.concat(maleFirstNames);
-                    lastNames = femaleLastNames.concat(maleLastNames);
-                }
-
-                generateRandomNames(firstNames, lastNames);
-            });
-        });
-    </script>
+    <script src="assets/js/index.js"></script>
 
     <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136467145-1"></script>
+    <!-- <script async src="https://www.googletagmanager.com/gtag/js?id=UA-136467145-1"></script> -->
     <!-- <script>
         window.dataLayer = window.dataLayer || [];
         function gtag() { dataLayer.push(arguments); }
