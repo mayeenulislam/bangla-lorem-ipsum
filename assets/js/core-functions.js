@@ -146,3 +146,30 @@ function shuffle(a) {
     }
     return a;
 }
+
+/**
+ * Convert Roman Numerals into Bangla.
+ * @author Md. Shariful Islam
+ * @link https://gist.github.com/sharif2008/275d7e03b149f2a42ed2878cf57edf35
+ * @returns String
+ */
+var romanToBanglaNumber = {
+    0: "০",
+    1: "১",
+    2: "২",
+    3: "৩",
+    4: "৪",
+    5: "৫",
+    6: "৬",
+    7: "৭",
+    8: "৮",
+    9: "৯",
+};
+String.prototype.getBanglaDigitFromRoman = function () {
+    var retStr = this;
+    for (var x in romanToBanglaNumber) {
+        retStr = retStr.replace(new RegExp(x, "g"), romanToBanglaNumber[x]);
+    }
+
+    return retStr;
+};

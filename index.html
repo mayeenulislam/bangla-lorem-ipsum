@@ -50,14 +50,19 @@
         datalist option {
             padding: 0;
         }
+
+        #generated-text p:last-child {
+            margin-bottom: 0;
+        }
     </style>
 </head>
 <body class="bg-light">
     <div class="container py-5 ">
-        <h1 class="text-center fw-bold mb-0">
+        <h1 class="visually-hidden">
             বাংলা নমুনা লেখা - Bangla Lorem Ipsum
         </h1>
-        <p class="text-center mt-0 px-5">বাংলায় নমুনা লেখা</p>
+        <div class="text-center fw-bold mb-0 h1" aria-hidden="true">বাংলা নমুনা লেখা</div>
+        <p class="text-center mt-0 px-5">Bangla Lorem Ipsum Generator</p>
 
         <section class="card">
             <nav class="card-header">
@@ -115,21 +120,21 @@
                             <label class="btn btn-outline-primary btn-sm" for="generate-paragraphs">
                                 <i class="bi bi-text-paragraph me-2" aria-hidden="true"></i>
                                 অনুচ্ছেদ
-                                <span class="badge rounded-pill bg-white text-primary ms-1 badge--count">5</span>
+                                <span class="badge rounded-pill bg-white text-primary ms-1 badge--count">৫</span>
                             </label>
 
                             <input type="radio" class="btn-check" name="generator_type_choice" id="generate-sentences" value="sentences" autocomplete="off">
                             <label class="btn btn-outline-primary btn-sm" for="generate-sentences">
                                 <i class="bi bi-card-text me-2" aria-hidden="true"></i>
                                 বাক্য
-                                <span class="badge rounded-pill bg-white text-primary ms-1 badge--count d-none">5</span>
+                                <span class="badge rounded-pill bg-white text-primary ms-1 badge--count d-none">৫</span>
                             </label>
 
                             <input type="radio" class="btn-check" name="generator_type_choice" id="generate-words" value="words" autocomplete="off">
                             <label class="btn btn-outline-primary btn-sm" for="generate-words">
                                 <i class="bi bi-card-list me-2" aria-hidden="true"></i>
                                 শব্দ
-                                <span class="badge rounded-pill bg-white text-primary ms-1 badge--count d-none">5</span>
+                                <span class="badge rounded-pill bg-white text-primary ms-1 badge--count d-none">৫</span>
                             </label>
                         </nav>
                     </div>
@@ -192,6 +197,9 @@
                             <i class="bi bi-gender-female me-2" aria-hidden="true"></i>
                             নারী
                         </label>
+                        <small class="text-muted ms-3 d-none d-sm-inline-block" role="alert">
+                            <i class="bi bi-info-circle me-2"></i> নামের উপর ক্লিক করলে কপি হবে
+                        </small>
                     </nav>
                     <div class="row row-cols-1 row-cols-sm-3 row-cols-md-4 row-cols-lg-5 g-2" id="random-names"></div>
                     <button

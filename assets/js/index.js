@@ -54,7 +54,7 @@ generateCountSlider.addEventListener("input", (event) => {
     generateCount = event.target.value;
 
     countBadges.forEach((countBadge) => {
-        countBadge.innerText = generateCount;
+        countBadge.innerText = generateCount.toString().getBanglaDigitFromRoman();
     });
 
     var generatorRadioDefaultChoice = document.querySelector(
