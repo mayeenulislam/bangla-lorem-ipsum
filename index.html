@@ -22,47 +22,15 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;700&display=swap" rel="stylesheet">
-    <!-- <link rel="stylesheet" href="assets/css/app.css"> -->
-    <style>
-        body {
-            font-family: 'Hind Siliguri', sans-serif;
-        }
-
-        .btn--copy__all {
-            top: 0rem;
-            right: 0rem;
-        }
-
-        @media (min-width: 768px) {
-            .generator-equilizer {
-                max-width: 50%;
-            }
-        }
-
-        datalist {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            writing-mode: vertical-lr;
-            width: 100%;
-        }
-
-        datalist option {
-            padding: 0;
-        }
-
-        #generated-text p:last-child {
-            margin-bottom: 0;
-        }
-    </style>
+    <link rel="stylesheet" href="assets/css/app.css">
 </head>
 <body class="bg-light">
     <div class="container py-5 ">
         <h1 class="visually-hidden">
             বাংলা নমুনা লেখা - Bangla Lorem Ipsum
         </h1>
-        <div class="text-center fw-bold mb-0 h1" aria-hidden="true">বাংলা নমুনা লেখা</div>
-        <p class="text-center mt-0 px-5">Bangla Lorem Ipsum Generator</p>
+        <div class="text-center fw-bold mb-0 h1 text-primary" aria-hidden="true">বাংলা নমুনা লেখা</div>
+        <p class="text-center mt-0 px-5 text-uppercase">Bangla Lorem Ipsum Generator</p>
 
         <section class="card">
             <nav class="card-header">
@@ -70,13 +38,13 @@
                     <li class="nav-item">
                         <button type="button" id="generator-tab" class="nav-link text-dark active" aria-selected="true" data-bs-toggle="tab" data-bs-target="#generator-tab-pane" aria-controls="generator-tab-pane" role="tab">
                             <i class="bi bi-gear-fill me-2" aria-hidden="true"></i>
-                            উপজাযন্তর
+                            রচনাযন্তর
                             <i
                                 class="bi bi-info-circle ms-1 d-none d-sm-inline-block"
                                 style="font-size: 11px"
                                 aria-hidden="true"
                                 data-bs-toggle="tooltip"
-                                data-bs-title="'উপজা' অর্থ জন্ম নেয়া, আর 'যন্তর' তো যন্ত্র। ভাবলাম Generator শব্দটার অর্থ 'উৎপাদক' না রেখে নতুন কিছু রাখা যাক, তাই 'উপজাযন্তর' রাখা 😇। অবোধগম্য নাম রেখে লাভটা কী হলো? ক্ষতিও কিছু হয়নি। যন্ত্রের কাজ সম্পর্কে ব্যবহারকারীর না বোঝার যেহেতু কোনো কারণ নেই, তাই নামে কী যায় আসে?"
+                                data-bs-title="'রচনা' অর্থ বিন্যাস, গ্রন্থন, নির্মাণ; আর 'যন্তর' তো যন্ত্র। ভাবলাম Generator শব্দটার অর্থ 'উৎপাদক' না রেখে নতুন কিছু রাখা যাক, তাই 'রচনাযন্তর' রাখা 😇। অবোধগম্য নাম রেখে লাভটা হলো কী? ...ক্ষতিও কিছু হয়নি। যন্ত্রের কাজ সম্পর্কে ব্যবহারকারীর না বোঝার যেহেতু কোনো কারণ নেই, তাই নামে কী যায় আসে, বলুন?"
                             ></i>
                         </button>
                     </li>
@@ -89,65 +57,80 @@
                     <li class="nav-item">
                         <button type="button" id="paragraph-tab" class="nav-link text-dark" aria-selected="false" data-bs-toggle="tab" data-bs-target="#paragraph-tab-pane" aria-controls="paragraph-tab-pane" role="tab">
                             <i class="bi bi-body-text me-2" aria-hidden="true"></i>
-                            পূর্ণাঙ্গ লেখা
+                            অর্থহীন লেখা
                         </button>
                     </li>
                 </ul>
             </nav>
             <!-- /.card-header -->
             <div class="card-body py-4 tab-content">
-                <div class="tab-pane fade show active position-relative" id="generator-tab-pane" role="tabpanel" aria-labelledby="generator-tab" tabindex="0">
-                    <div class="card generator-equilizer bg-light shadow-sm border border-primary p-3 mb-5 mx-auto">
-                        <div class="mb-3">
-                            <label for="range-slider" class="form-label visually-hidden">সংখ্যা</label>
-                            <input type="range" id="range-slider" style="width: 100%" value="5" min="0" max="100" list="range-markers">
-                            <datalist id="range-markers">
-                                <option value="0" label="০"></option>
-                                <option value="10" label="১০"></option>
-                                <option value="20" label="২০"></option>
-                                <option value="30" label="৩০"></option>
-                                <option value="40" label="৪০"></option>
-                                <option value="50" label="৫০"></option>
-                                <option value="60" label="৬০"></option>
-                                <option value="70" label="৭০"></option>
-                                <option value="80" label="৮০"></option>
-                                <option value="90" label="৯০"></option>
-                                <option value="100" label="১০০"></option>
-                            </datalist>
+                <div class="tab-pane fade show active" id="generator-tab-pane" role="tabpanel" aria-labelledby="generator-tab" tabindex="0">
+                    <div class="card bg-light shadow-sm border border-primary p-3 mb-5">
+                        <div class="row">
+                            <div class="col-md-6 mb-3 mb-md-0">
+                                <label for="range-slider" class="form-label visually-hidden">সংখ্যা</label>
+                                <input type="range" id="range-slider" style="width: 100%" value="5" min="0" max="100" list="range-markers">
+                                <datalist id="range-markers">
+                                    <option value="0" label="০"></option>
+                                    <option value="10" label="১০"></option>
+                                    <option value="20" label="২০"></option>
+                                    <option value="30" label="৩০"></option>
+                                    <option value="40" label="৪০"></option>
+                                    <option value="50" label="৫০"></option>
+                                    <option value="60" label="৬০"></option>
+                                    <option value="70" label="৭০"></option>
+                                    <option value="80" label="৮০"></option>
+                                    <option value="90" label="৯০"></option>
+                                    <option value="100" label="১০০"></option>
+                                </datalist>
+                            </div>
+                            <div class="col-md-6">
+                                <nav class="btn-group d-flex flex-row">
+                                    <input type="radio" class="btn-check" name="generator_type_choice" id="generate-paragraphs" value="paragraphs" autocomplete="off" checked>
+                                    <label class="btn btn-outline-primary btn-sm" for="generate-paragraphs">
+                                        <i class="bi bi-text-paragraph me-2" aria-hidden="true"></i>
+                                        অনুচ্ছেদ
+                                        <span class="badge rounded-pill bg-white text-primary ms-1 badge--count">৫</span>
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="generator_type_choice" id="generate-sentences" value="sentences" autocomplete="off">
+                                    <label class="btn btn-outline-primary btn-sm" for="generate-sentences">
+                                        <i class="bi bi-card-text me-2" aria-hidden="true"></i>
+                                        বাক্য
+                                        <span class="badge rounded-pill bg-white text-primary ms-1 badge--count d-none">৫</span>
+                                    </label>
+
+                                    <input type="radio" class="btn-check" name="generator_type_choice" id="generate-words" value="words" autocomplete="off">
+                                    <label class="btn btn-outline-primary btn-sm" for="generate-words">
+                                        <i class="bi bi-card-list me-2" aria-hidden="true"></i>
+                                        শব্দ
+                                        <span class="badge rounded-pill bg-white text-primary ms-1 badge--count d-none">৫</span>
+                                    </label>
+                                </nav>
+                            </div>
                         </div>
-                        <nav class="btn-group">
-                            <input type="radio" class="btn-check" name="generator_type_choice" id="generate-paragraphs" value="paragraphs" autocomplete="off" checked>
-                            <label class="btn btn-outline-primary btn-sm" for="generate-paragraphs">
-                                <i class="bi bi-text-paragraph me-2" aria-hidden="true"></i>
-                                অনুচ্ছেদ
-                                <span class="badge rounded-pill bg-white text-primary ms-1 badge--count">৫</span>
-                            </label>
-
-                            <input type="radio" class="btn-check" name="generator_type_choice" id="generate-sentences" value="sentences" autocomplete="off">
-                            <label class="btn btn-outline-primary btn-sm" for="generate-sentences">
-                                <i class="bi bi-card-text me-2" aria-hidden="true"></i>
-                                বাক্য
-                                <span class="badge rounded-pill bg-white text-primary ms-1 badge--count d-none">৫</span>
-                            </label>
-
-                            <input type="radio" class="btn-check" name="generator_type_choice" id="generate-words" value="words" autocomplete="off">
-                            <label class="btn btn-outline-primary btn-sm" for="generate-words">
-                                <i class="bi bi-card-list me-2" aria-hidden="true"></i>
-                                শব্দ
-                                <span class="badge rounded-pill bg-white text-primary ms-1 badge--count d-none">৫</span>
-                            </label>
-                        </nav>
                     </div>
-                    <div id="generated-text"></div>
-                    <button class="btn--copy__all btn btn-outline-secondary btn-sm position-absolute" data-bs-toggle="tooltip"
-                        data-bs-title="সব কপি করুন" onclick="copyAllToClipboard('generated-text', this)">
+                    <div class="position-relative">
+                        <button class="btn btn-outline-secondary btn-sm float-end ms-2 mb-2" data-bs-toggle="tooltip"
+                            data-bs-title="সব কপি করুন" onclick="copyAllToClipboard('generated-text', this)">
+                            <i class="bi bi-clipboard2 copy--icon" aria-hidden="true"></i>
+                            <span class="visually-hidden copy--text">সম্পূর্ণ কপি করুন</span>
+                        </button>
+                        <div id="generated-text"></div>
+                    </div>
+                </div>
+                <div class="tab-pane fade position-relative" id="paragraph-tab-pane" role="tabpanel" aria-labelledby="paragraph-tab" tabindex="0">
+                    <button
+                        class="btn btn-outline-secondary btn-sm float-end ms-1 mb-1"
+                        data-bs-toggle="tooltip"
+                        data-bs-title="সব কপি করুন"
+                        onclick="copyAllToClipboard('article', this)"
+                    >
                         <i class="bi bi-clipboard2 copy--icon" aria-hidden="true"></i>
                         <span class="visually-hidden copy--text">সম্পূর্ণ কপি করুন</span>
                     </button>
-                </div>
-                <div class="tab-pane fade position-relative" id="paragraph-tab-pane" role="tabpanel" aria-labelledby="paragraph-tab" tabindex="0">
                     <article id="article">
-                        <h2 class="h4 fw-bold mb-3">অর্থহীন লেখা</h2>
+                        <h2 class="h4 fw-bold mb-3 visually-hidden">অর্থহীন লেখা</h2>
                         <p>অর্থহীন লেখা যার মাঝে আছে অনেক কিছু। হ্যাঁ, এই লেখার মাঝেই আছে অনেক কিছু। যদি তুমি মনে করো, এটা তোমার কাজে
                             লাগবে, তাহলে তা লাগবে কাজে। নিজের ভাষায় লেখা দেখতে অভ্যস্ত হও। মনে রাখবে লেখা অর্থহীন হয়, যখন তুমি তাকে
                             অর্থহীন মনে করো; আর লেখা অর্থবোধকতা তৈরি করে, যখন তুমি তাতে অর্থ ঢালো। যেকোনো লেখাই তোমার কাছে অর্থবোধকতা
@@ -168,15 +151,6 @@
                         <p>অর্থহীনতা আর অর্থদ্যোতনার সেই ঈর্ষাকাতর মোহাবিষ্টতা তাই তৈরি করে নাও নিজের মাঝে- চাই একটুখানি ঔৎসুক্য। নিজেই
                             ঠিক করো, নিজের ভাষাটা কি অর্থহীন, নাকি কিছু সত্যিই বলছে!</p>
                     </article>
-                    <button
-                        class="btn--copy__all btn btn-outline-secondary btn-sm position-absolute"
-                        data-bs-toggle="tooltip"
-                        data-bs-title="সব কপি করুন"
-                        onclick="copyAllToClipboard('article', this)"
-                    >
-                        <i class="bi bi-clipboard2 copy--icon" aria-hidden="true"></i>
-                        <span class="visually-hidden copy--text">সম্পূর্ণ কপি করুন</span>
-                    </button>
                 </div>
                 <div class="tab-pane fade position-relative" id="names-tab-pane" role="tabpanel" aria-labelledby="names-tab" tabindex="0">
                     <nav class="mb-3">
@@ -217,10 +191,12 @@
         </section>
         <!-- /.card -->
 
-        <p class="text-center small text-muted mt-5">
-            কোড ও বিস্তারিত <a href="https://github.com/mayeenulislam/bangla-lorem-ipsum" target="_blank" rel="noopener" class="text-decoration-none">Github রেপোযিটরিতে</a>
+        <p class="text-center small text-muted mt-3">
+            <i class="bi bi-heart-fill me-2 text-danger" aria-hidden="true"></i> পল্লীকবি <strong>জসীম উদ্‌দীন</strong> (১৯০৩-১৯৭৬)
             <span class="mx-2">|</span>
-            তৈরি করেছেন <a href="https://mayeenulislam.github.io" target="_blank" rel="noopener" class="text-decoration-none">মঈনুল ইসলাম</a>
+            কোড ও বিস্তারিত <a href="https://github.com/mayeenulislam/bangla-lorem-ipsum" target="_blank" rel="noopener" class="text-decoration-none"><strong>Github</strong> রেপোযিটরিতে</a>
+            <span class="mx-2">|</span>
+            তৈরি করেছেন <a href="https://mayeenulislam.github.io" target="_blank" rel="noopener" class="text-decoration-none"><strong>মঈনুল ইসলাম</strong></a>
         </p>
     </div>
 

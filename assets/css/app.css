@@ -1,0 +1,99 @@
+:root {
+    --bli-theme-color: #550055;
+    --bli-theme-color-rgb: 85,0,85;
+
+    --bs-primary-rgb: var(--bli-theme-color-rgb);
+    --bs-link-color-rgb: var(--bli-theme-color-rgb);
+}
+
+.btn-outline-primary {
+    --bs-btn-color: var(--bli-theme-color);
+    --bs-btn-border-color: var(--bli-theme-color);
+    --bs-btn-hover-bg: var(--bli-theme-color);
+    --bs-btn-hover-border-color: var(--bli-theme-color);
+    --bs-btn-active-bg: var(--bli-theme-color);
+    --bs-btn-active-border-color: var(--bli-theme-color);
+    --bs-btn-disabled-color: var(--bli-theme-color);
+    --bs-btn-disabled-border-color: var(--bli-theme-color);
+}
+
+body {
+    font-family: 'Hind Siliguri', sans-serif;
+}
+
+.btn--copy__all {
+    top: 0rem;
+    right: 0rem;
+}
+
+datalist {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: -12px;
+    writing-mode: vertical-lr;
+    font-size: 13px;
+}
+
+datalist option {
+    padding: 0;
+}
+
+datalist option::before {
+    content: "—";
+    margin-bottom: 3px;
+    color: #ccc;
+}
+
+#generated-text p:last-child {
+    margin-bottom: 0;
+}
+
+input[type="range"] {
+    -webkit-appearance: none;
+    background: transparent;
+}
+
+input[type="range"]::-webkit-slider-runnable-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    border-radius: 5px;
+    box-shadow: 0px 0px 0px #000000;
+    background-color: #a694a6;
+}
+
+input[type="range"]::-webkit-slider-thumb {
+    width: 16px;
+    height: 16px;
+    margin-top: -6px;
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #550055;
+    border-radius: 3px;
+    background-color: #550055;
+    cursor: pointer;
+    -webkit-appearance: none;
+}
+
+input[type="range"]::-moz-range-thumb {
+    box-shadow: 0px 0px 0px #000000;
+    border: 0px solid #550055;
+    height: 16px;
+    width: 16px;
+    border-radius: 10px;
+    background-color: #550055;
+    cursor: pointer;
+}
+
+input[type="range"]::-moz-range-track {
+    width: 100%;
+    height: 5px;
+    cursor: pointer;
+    animate: 0.2s;
+    box-shadow: 0px 0px 0px #000000;
+    background-color: #550055;
+    border-radius: 5px;
+    border: 0px solid #550055;
+}
