@@ -12,6 +12,6 @@ I decided to make the solution as a standalone web app. At that time I came in t
 
 ## Credits
 
-The poem _"Samayer Kaachhe"_ by Jibanananda Das is the heart of the Generator. Also thanks to [Favicon Generator](https://favicon.io/favicon-generator/) for the Favicon
+The poem _Tarun Kishore_ by Jasimuddin is the heart of the Generator. Also thanks to [Favicon Generator](https://favicon.io/favicon-generator/) for the Favicon
 
 Made by [@mayeenulislam](https://github.com/mayeenulislam)
