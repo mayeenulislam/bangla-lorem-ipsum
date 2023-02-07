@@ -1,3 +1,7 @@
+> REFACTORING UNDER PROGRESS<br/>
+> REDESIGNING WITH TAILWIND CSS IS UNDER PROGRESS ♻️<br/>
+> `npx tailwindcss -i ./src/assets/scss/app.scss -o ./public/assets/css/app.min.css --watch`
+
 # নমুনা লেখা (Bangla Lorem Ipsum Generator)
 
 A web application for generating gibberish text in Bangla (Bengali)

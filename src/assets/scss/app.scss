@@ -1,4 +1,8 @@
-:root {
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* :root {
     --bli-theme-color: #550055;
     --bli-theme-color-rgb: 85,0,85;
 
@@ -15,7 +19,7 @@
     --bs-btn-active-border-color: var(--bli-theme-color);
     --bs-btn-disabled-color: var(--bli-theme-color);
     --bs-btn-disabled-border-color: var(--bli-theme-color);
-}
+} */
 
 body {
     font-family: 'Hind Siliguri', sans-serif;
